@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Modification Shop</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e8f9fd;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff1e00;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #59ce8f;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 15px;
+      padding: 15px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .add-to-cart {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    button {
+      background-color: #59ce8f;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #4fac7d;
+    }
+
+    .cart {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .cart button {
+      background-color: #ff1e00;
+    }
+
+    .home-section,
+    .profile-section,
+    .signup-section,
+    .categories-section,
+    .news-section {
+      text-align: center;
+      padding: 50px;
+    }
+
+    /* Additional styles for homepage sections */
+    .home-section {
+      background-color: #ff1e00;
+      color: #fff;
+    }
+
+    .home-section h2 {
+      color: #59ce8f;
+    }
+
+    /* Additional styles for profile section */
+    .profile-section {
+      background-color: #e8f9fd;
+      color: #333;
+    }
+
+    /* Additional styles for signup section */
+    .signup-section {
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Additional styles for categories section */
+    .categories-section {
+      background-color: #59ce8f;
+      color: #fff;
+    }
+
+    /* Additional styles for news section */
+    .news-section {
+      background-color: #e8f9fd;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Car Modification Shop</h1>
+  </header>
+
+  <nav>
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#products" class="nav-link">Products</a>
+    <a href="#categories" class="nav-link">Categories</a>
+    <a href="#news" class="nav-link">Latest News</a>
+    <a href="#profile" class="nav-link">Profile</a>
+    <a href="#signup" class="nav-link">Signup</a>
+  </nav>
+
+  <div id="home" class="home-section">
+    <h2>Welcome to Car Modification Shop</h2>
+    <p>Explore our high-quality car modification products and enhance your driving experience.</p>
+  </div>
+
+  <section id="products">
+    <!-- Products go here, as in the previous example -->
+    <div class="product">
+      <img src="car1.jpg" alt="Custom Exhaust System">
+      <h2>Custom Exhaust System</h2>
+      <p>Enhance your car's performance with our high-quality custom exhaust system.</p>
+      <p>$199.99</p>
+      <div class="add-to-cart">
+        <button onclick="addToCart('Custom Exhaust System', 199.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="car2.jpg" alt="Sport Suspension Kit">
+      <h2>Sport Suspension Kit</h2>
+      <p>Upgrade your car's handling and appearance with our sport suspension kit.</p>
+      <p>$299.99</p>
+      <div class="add-to-cart">
+        <button onclick="addToCart('Sport Suspension Kit', 299.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="car3.jpg" alt="Performance Air Filter">
+      <h2>Performance Air Filter</h2>
+      <p>Improve your car's air intake and horsepower with our performance air filter.</p>
+      <p>$49.99</p>
+      <div class="add-to-cart">
+        <button onclick="addToCart('Performance Air Filter', 49.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="car4.jpg" alt="LED Headlight Conversion Kit">
+      <h2>LED Headlight Conversion Kit</h2>
+      <p>Upgrade your car's lighting with our energy-efficient LED headlight conversion kit.</p>
+      <p>$129.99</p>
+      <div class="add-to-cart">
+        <button onclick="addToCart('LED Headlight Conversion Kit', 129.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Add more products as needed -->
+  </section>
+
+  <section id="categories" class="categories-section">
+    <h2>Popular Categories</h2>
+    <p>Discover products based on your car's needs.</p>
+    <!-- Add category-specific content here -->
+  </section>
+
+  <section id="news" class="news-section">
+    <h2>Latest News</h2>
+    <p>Stay updated with the latest trends and news in car modification.</p>
+    <!-- Add news articles or updates here -->
+  </section>
+
+  <section id="profile" class="profile-section">
+    <h2>User Profile</h2>
+    <p>View and manage your profile information and order history.</p>
+  </section>
+
+  <section id="signup" class="signup-section">
+    <h2>Signup for Exclusive Offers</h2>
+    <p>Join our community and receive special discounts and updates.</p>
+    <!-- Add signup form or CTA (Call to Action) here -->
+  </section>
+
+  <div class="cart">
+    <h2>Shopping Cart</h2>
+    <p>Total: $<span id="total">0.00</span></p>
+    <button onclick="viewCart()">View Cart</button>
+  </div>
+
+  <script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      total += price;
+      document.getElementById('total').innerText = total.toFixed(2);
+    }
+
+    function viewCart() {
+      alert("Cart Contents:\n" + cart.map(item => `${item.product} - $${item.price.toFixed(2)}`).join('\n'));
+    }
+  </script>
+
+</body>
+</html>
